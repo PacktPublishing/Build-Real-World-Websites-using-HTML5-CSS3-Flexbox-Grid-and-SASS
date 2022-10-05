@@ -1,0 +1,68 @@
+/*Let's make sure that the dimensions of any box includes its border and padding, this gives us an easy way of sizing our elements*/
+* {
+    box-sizing: border-box;
+}
+
+
+.container > div{
+    background-color: #66a5AD;
+    color: aliceblue;
+    text-align: center;
+    font-size: 20px;
+    padding: 5px;
+    /*    margin: 2px;*/
+}
+
+.container{
+    height: 100vh;
+    background-color: #07575B;
+    /*    turning the container to a grid*/
+    display: grid;
+    grid-template-areas: 
+        "facebook"
+        "apple"
+        "microsoft"
+        "samsung"
+        "google";
+    grid-template-rows: 50px 100px 1fr 100px 50px;
+    grid-template-columns: 1fr;
+    /*    gutter*/
+    grid-gap: 5px;
+    padding: 7px;
+    /*    set the height of any extra rows outside the template(implicit grid)*/
+    grid-auto-rows: 70px;
+    /*
+    grid-auto-columns: 200px;
+    grid-auto-flow: column;
+    */
+}
+
+#apple{
+    grid-area: apple;
+}
+#facebook{
+    grid-area: facebook;
+}
+#microsoft{
+    grid-area: microsoft;
+}
+#samsung{
+    grid-area: samsung;
+}
+#google{
+    grid-area: google;
+}
+
+@media all and (min-width: 700px){
+    .container{
+        /*    rows height*/
+        grid-template-rows: 50px 1fr 50px;
+        /*    columns width*/
+        grid-template-columns: 20% 1fr 20%;
+        /*    grid areas*/
+        grid-template-areas: 
+            "apple apple apple"
+            "facebook microsoft samsung"
+            "google google google";
+    }
+}

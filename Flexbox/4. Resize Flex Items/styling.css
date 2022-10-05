@@ -1,0 +1,58 @@
+/*Let's make sure that the dimensions of any box includes its border and padding, this gives us an easy way of sizing our elements*/
+* {
+    box-sizing: border-box;
+}
+
+/*style the container*/
+.container{
+    background-color: #07575B;
+    height: 250px;
+    margin: 10px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+/*    justify-content: center;*/
+    align-items: stretch;
+    align-content: center;
+}
+
+/*style divs inside the container*/
+.container > div{
+    background-color: #66a5AD;
+    color: aliceblue;
+    text-align: center;
+    padding: 20px;
+    margin: 1px;
+    border: 3px #C4DFE6 solid;
+/*
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 150px;
+*/
+/*    flex: 0 1 auto;*/
+/*    flex: initial;*/
+    
+/*    flex: 1 1 auto;*/
+/*    flex: auto;*/
+    
+/*    flex: 0 0 auto;*/
+/*    flex: none;*/
+    
+/*    flex: 1 0 auto;*/
+    flex: 1 10%;
+}
+
+
+
+
+
+
+#facebook{
+    font-size: 10px;
+    flex: 30%;
+}
+
+#apple{
+/*    flex-shrink: 0;*/
+    flex: 30%;
+}

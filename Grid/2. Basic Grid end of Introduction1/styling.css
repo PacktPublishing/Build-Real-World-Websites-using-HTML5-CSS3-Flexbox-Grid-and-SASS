@@ -1,0 +1,28 @@
+/*Let's make sure that the dimensions of any box includes its border and padding, this gives us an easy way of sizing our elements*/
+* {
+    box-sizing: border-box;
+}
+
+
+.container > div{
+    background-color: #66a5AD;
+    color: aliceblue;
+    text-align: center;
+    font-size: 20px;
+    padding: 5px;
+/*    margin: 2px;*/
+}
+
+.container{
+    height: 250px;
+    background-color: #07575B;
+/*    turning the container to a grid*/
+    display: grid;
+/*    rows height*/
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+/*    columns width*/
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+/*    gutter*/
+    grid-gap: 5px;
+    padding: 7px;
+}

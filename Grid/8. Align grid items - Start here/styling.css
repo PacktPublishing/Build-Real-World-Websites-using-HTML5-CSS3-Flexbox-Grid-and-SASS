@@ -1,0 +1,24 @@
+/*Let's make sure that the dimensions of any box includes its border and padding, this gives us an easy way of sizing our elements*/
+* {
+    box-sizing: border-box;
+}
+
+/*grid container*/
+.container1{
+    background-color: #07575B;
+/*    mention nested grids*/
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 5px;
+    padding: 7px;
+}
+
+/*grid items*/
+div{
+    background-color: #66a5AD;
+    color: aliceblue;
+    text-align: center;
+    font-size: 20px;
+    padding: 5px;
+}

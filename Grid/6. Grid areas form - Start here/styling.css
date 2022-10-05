@@ -1,0 +1,17 @@
+/*Let's make sure that the dimensions of any box includes its border and padding, this gives us an easy way of sizing our elements*/
+* {
+    box-sizing: border-box;
+}
+
+
+form{
+    font-size: 20px;
+    background-color: lightgoldenrodyellow;
+    padding: 20px;
+}
+form > label{
+    background-color: greenyellow;
+}
+form > input{
+    font-size: 1em;
+}

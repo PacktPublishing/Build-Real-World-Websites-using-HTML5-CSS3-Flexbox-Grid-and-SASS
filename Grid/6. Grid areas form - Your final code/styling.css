@@ -1,0 +1,26 @@
+/*Let's make sure that the dimensions of any box includes its border and padding, this gives us an easy way of sizing our elements*/
+* {
+    box-sizing: border-box;
+}
+
+
+form{
+    font-size: 20px;
+    background-color: lightgoldenrodyellow;
+    padding: 20px;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: [label] auto [input] 1fr;
+}
+form > label{
+/*    background-color: greenyellow;*/
+    grid-column: label;
+}
+form > input{
+    font-size: 1em;
+    grid-column: input;
+}
+
+form > input[type="submit"]{
+    grid-column: span 2;
+}
