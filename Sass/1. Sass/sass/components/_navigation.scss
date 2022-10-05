@@ -1,0 +1,22 @@
+nav{
+    display: flex;
+    background-color: $color1;
+    a{
+        flex: 1;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 20px;
+        padding: 20px;
+        &:hover{
+            background-color: darken($color1, 15%);
+        }
+        &:active{
+            background-color: darken($color1, 25%);
+        }
+        &.active{
+            color: #B314DB;
+            font-weight: bold;
+            font-size: 24px;
+        }
+    }
+}

@@ -1,0 +1,46 @@
+//nesting
+//sass: syntactically awesome style sheets
+
+@import "utils/variables";
+@import "components/navigation";
+@import "base/base";
+
+.button_wide{
+    width: 50%;
+}
+
+%button_common{
+    color: white;
+    font-size: 20px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+}
+
+article{
+    div{
+        h3{
+//            $color3: red !global;
+            color: $color2;
+            font-size: 28px;
+        }
+        p{
+            color: $color3;
+            font-size: 20px;
+        }
+    }
+}
+
+.btn-success{
+    @extend %button_common;
+    @extend .button_wide;
+    background-color: lawngreen;
+}
+.btn-warning{
+    @extend %button_common;
+    background-color: darkorange;
+}
+.btn-error{
+    @extend %button_common;
+    background-color: orangered;
+}

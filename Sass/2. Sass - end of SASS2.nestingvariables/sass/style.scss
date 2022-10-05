@@ -1,0 +1,49 @@
+//nesting
+//sass: syntactically awesome style sheets
+
+//variable can store any CSS value
+$color1: #F8F594;
+$color2: #5d12e7;
+$color3: #316901;
+
+
+*{
+    box-sizing: border-box;
+}
+
+nav{
+    display: flex;
+    background-color: $color1;
+    a{
+        flex: 1;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 20px;
+        padding: 20px;
+        &:hover{
+            background-color: yellow;
+        }
+        &:active{
+            background-color: greenyellow;
+        }
+        &.active{
+            color: #B314DB;
+            font-weight: bold;
+            font-size: 24px;
+        }
+    }
+}
+
+article{
+    div{
+        h3{
+//            $color3: red !global;
+            color: $color2;
+            font-size: 28px;
+        }
+        p{
+            color: $color3;
+            font-size: 20px;
+        }
+    }
+}

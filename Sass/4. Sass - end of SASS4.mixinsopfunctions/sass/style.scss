@@ -1,0 +1,67 @@
+//nesting
+//sass: syntactically awesome style sheets
+
+//DRY: don't repeat yourself
+//KISS: keep it stupid simple
+
+@import "utils/variables";
+@import "components/navigation";
+@import "base/base";
+
+.button_wide{
+    width: 300 / 800 * 100%;
+}
+
+%button_common{
+    color: white;
+    font-size: 20px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+}
+
+//create a mixin
+@mixin h_transform($angle:-5deg){
+    transform: rotate($angle);
+    -ms-transform: rotate($angle);//IE versions 9.0 and older
+    -moz-transform: rotate($angle);//mozilla firefox versions 3.5 and older
+    -webkit-transform: rotate($angle);//Chrome versions 4.0 and older
+}
+
+article{
+    div{
+        h3{
+            //            $color3: red !global;
+            color: $color2;
+            font-size: 28px;
+        }
+        p{
+            color: $color3;
+            font-size: 20px;
+        }
+    }
+    div:nth-child(1){
+        h3:nth-child(1){
+            @include h_transform();
+        }
+    }
+    div:nth-child(2){
+        h3:nth-child(1){
+            @include h_transform(-3deg);
+        }
+    }
+}
+
+.btn-success{
+    @extend %button_common;
+    @extend .button_wide;
+    background-color: lawngreen;
+}
+.btn-warning{
+    @extend %button_common;
+    background-color: darkorange;
+}
+.btn-error{
+    @extend %button_common;
+    background-color: orangered;
+}
