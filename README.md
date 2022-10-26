@@ -31,3 +31,7 @@ N/A
 * [Building Microservices from Scratch [Video]](https://www.packtpub.com/application-development/building-microservices-scratch-video)
 
 * [Build a Car Driving Game from Scratch using JavaScript [Video]](https://www.packtpub.com/application-development/build-car-driving-game-scratch-using-javascript-video)
+### Download a free PDF
+
+ <i>If you have already purchased a print or Kindle version of this book, you can get a DRM-free PDF version at no cost.<br>Simply click on the link to claim your free PDF.</i>
+<p align="center"> <a href="https://packt.link/free-ebook/9781789343632">https://packt.link/free-ebook/9781789343632 </a> </p>
